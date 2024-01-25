@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+}
+.tela {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.relogio {
+    max-width: 900px;
+    width: 90vw;
+    height: 50vh;
+    border: solid black 5px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.itens {
+    display: flex;
+    flex-direction: column;
+}
+#location {
+    font-size: 4vh;
+    align-self: end;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#timer {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 7vh;
+}
+#date {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    align-self: end;
+    font-size: 4vh;
+}
