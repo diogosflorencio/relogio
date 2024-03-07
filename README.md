@@ -30,7 +30,7 @@ Não há pré-requisitos. Basta clicar no link:  [Relógio](https://diogosfloren
 Para iniciar o projeto no seu computador, basta clonar o repositório:
 
 ```
-git clone https://github.com/diogosflorencio/forca
+git clone https://github.com/diogosflorencio/relogio
 ```
 
 ## 📫 Contribuindo para "Criando um Relógio - Relógio"
