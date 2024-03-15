@@ -1,4 +1,14 @@
 {
+  "name": "relogio",
+  "description": "![GitHub repo size](https://img.shields.io/github/repo-size/diogosflorencio/relogio?style=for-the-badge)\r ![GitHub language count](https://img.shields.io/github/languages/count/diogosflorencio/relogio?style=for-the-badge)\r ![GitHub forks](https://img.shields.io/github/forks/diogosflorencio/relogio?style=for-the-badge)\r ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/diogosflorencio/relogio?style=for-the-badge)\r ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/diogosflorencio/relogio?style=for-the-badge)",
+  "version": "1.0.0",
+  "main": "script.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "diogosflorencio",
+  "license": "ISC",
   "dependencies": {
     "dayjs": "^1.11.10"
   }
