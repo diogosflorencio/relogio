@@ -6,7 +6,8 @@
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/diogosflorencio/relogio?style=for-the-badge)
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/diogosflorencio/relogio?style=for-the-badge)
 
-<img src="" style="width:33%" alt="Imagem de exemplo">
+<img src="https://github.com/diogosflorencio/relogio/assets/33941005/94a8a278-6c3d-461e-9a56-9c280eed9c83" style="width:33%" alt="Imagem de exemplo">
+
 
 > Projeto criado utilizando JavaScript, HTML e CSS. O objetivo do projeto é criar um relógio para praticar o JavaScript.
 
