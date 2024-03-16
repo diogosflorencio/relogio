@@ -1,7 +1,10 @@
 // import dayjs from 'https://cdn.jsdelivr.net/npm/dayjs@2.0.0-alpha.2/dist/index.mjs'
 // import { Dayjs } from 'dayjs';
 
-var Dayjs = require("dayjs")
+import Dayjs from "dayjs";
+import MicroModal from "micromodal";
+
+MicroModal.init()
 
 const timer = document.getElementById("timer");
 const date = document.getElementById("date");

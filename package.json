@@ -13,6 +13,7 @@
     "dayjs": "^1.11.10"
   },
   "devDependencies": {
+    "micromodal": "^0.4.10",
     "webpack": "^5.90.3",
     "webpack-cli": "^5.1.4"
   }
