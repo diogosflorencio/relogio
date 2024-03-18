@@ -9,40 +9,35 @@ Dayjs.extend(utc)
 Dayjs.extend(timezone)
 
 
-  // Abrir o modal ao clicar no botão de edição
-  document.getElementById('edit-button').addEventListener('click', function() {
-    MicroModal.show('timezone-modal');
-  });
+// Abrir o modal ao clicar no botão de edição
+document.getElementById('edit-button').addEventListener('click', function() {
+  MicroModal.show('timezone-modal');
+});
 
-  // Salvar o fuso horário selecionado ao clicar no botão de salvar
-  document.getElementById('save-button').addEventListener('click', function() {
-    var selectedTimezone = document.getElementById('timezone-select').value;
-    console.log('Fuso horário selecionado:', selectedTimezone);
-    // Aqui você pode adicionar lógica para salvar o fuso horário no backend ou onde for necessário
-    MicroModal.close('timezone-modal');
-  });
-
+// Salvar o fuso horário selecionado ao clicar no botão de salvar
+document.getElementById('save-button').addEventListener('click', function() {
+  var selectedTimezone = document.getElementById('timezone-select').value;
+  MicroModal.close('timezone-modal');
+  atualizarHoraRegularmente(selectedTimezone)
+});
   
 const timer = document.getElementById("timer");
 const date = document.getElementById("date");
 
-function exibirHoraAtualizada() {
-    timer.innerText = Dayjs().tz("Europe/Berlin").format("HH:mm:ss")
-    console.log(timer)
-
-    date.innerText = Dayjs().format("dddd")
+function exibirHoraAtualizada(param) {
+  timer.innerText = Dayjs().tz(param).format("HH:mm:ss")
+  date.innerText = Dayjs().format("dddd")
 }
-
 //loop + sleep 
 
 function aguardar(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function atualizarHoraRegularmente() {
+async function atualizarHoraRegularmente(param) {
     while (true) {
-        exibirHoraAtualizada();
+        exibirHoraAtualizada(param);
         await aguardar(1000);
     }
 }
-atualizarHoraRegularmente();
+atualizarHoraRegularmente(param);
