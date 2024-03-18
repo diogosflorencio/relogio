@@ -3,6 +3,10 @@
 
 import Dayjs from "dayjs";
 import MicroModal from "micromodal";
+var utc = require('dayjs/plugin/utc')
+var timezone = require('dayjs/plugin/timezone') 
+Dayjs.extend(utc)
+Dayjs.extend(timezone)
 
 
   // Abrir o modal ao clicar no botão de edição
@@ -23,7 +27,8 @@ const timer = document.getElementById("timer");
 const date = document.getElementById("date");
 
 function exibirHoraAtualizada() {
-    timer.innerText = Dayjs().format("HH:mm:ss")
+    timer.innerText = Dayjs().tz("Europe/Berlin").format("HH:mm:ss")
+    console.log(timer)
 
     date.innerText = Dayjs().format("dddd")
 }
