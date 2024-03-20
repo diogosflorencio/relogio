@@ -13,32 +13,32 @@ document.getElementById('edit-button').addEventListener('click', function() {
   MicroModal.show('timezone-modal');
 });
 
+var selectedTimezone = "ART";
 // Salvar o fuso horário selecionado ao clicar no botão de salvar
 document.getElementById('save-button').addEventListener('click', function() {
-  var selectedTimezone = document.getElementById('timezone-select').value;
+  selectedTimezone = document.getElementById('timezone-select').value;
   MicroModal.close('timezone-modal');
-  atualizarHoraRegularmente(selectedTimezone);
+  atualizarHoraRegularmente()
+  exibirHoraAtualizada(selectedTimezone);
 });
   
 const timer = document.getElementById("timer");
 const date = document.getElementById("date");
 
-async function atualizarHoraRegularmente(param) {
+async function atualizarHoraRegularmente() {
   while (true) {
-    exibirHoraAtualizada(param);
+    exibirHoraAtualizada(p);
     await aguardar(1000);
   }
 }
 
 function exibirHoraAtualizada(param) {
-  timer.innerText = Dayjs().tz(param).format("HH:mm:ss");
-  date.innerText = Dayjs().tz(param).format("dddd");
+  console.log(timer.innerText = Dayjs().tz(param).format("HH:mm:ss"))
+  date.innerText = Dayjs().format("dddd");
 }
 
 function aguardar(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
-
 // Obtendo o fuso horário padrão do navegador como parâmetro inicial
-const fusoHorarioPadrao = Intl.DateTimeFormat().resolvedOptions().timeZone;
-atualizarHoraRegularmente(fusoHorarioPadrao);
+
