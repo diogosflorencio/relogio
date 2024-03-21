@@ -20,6 +20,7 @@ document.getElementById('save-button').addEventListener('click', function() {
   MicroModal.close('timezone-modal');
   atualizarHoraRegularmente()
   exibirHoraAtualizada(selectedTimezone);
+  document.getElementById("location-country").innerText = selectedTimezone
 });
   
 const timer = document.getElementById("timer");
