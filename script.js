@@ -13,7 +13,7 @@ document.getElementById('edit-button').addEventListener('click', function() {
   MicroModal.show('timezone-modal');
 });
 
-var selectedTimezone = "ART";
+var selectedTimezone = "America/Sao_Paulo";
 // Salvar o fuso horário selecionado ao clicar no botão de salvar
 document.getElementById('save-button').addEventListener('click', function() {
   selectedTimezone = document.getElementById('timezone-select').value;
@@ -27,6 +27,7 @@ const date = document.getElementById("date");
 
 async function atualizarHoraRegularmente() {
   while (true) {
+    const p = selectedTimezone; // Definindo a variável p dentro do loop
     exibirHoraAtualizada(p);
     await aguardar(1000);
   }
@@ -40,5 +41,8 @@ function exibirHoraAtualizada(param) {
 function aguardar(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
+
 // Obtendo o fuso horário padrão do navegador como parâmetro inicial
 
+atualizarHoraRegularmente();
+exibirHoraAtualizada(selectedTimezone);
